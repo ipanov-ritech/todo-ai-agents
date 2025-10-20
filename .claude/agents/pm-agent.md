@@ -2,8 +2,9 @@
 
 ## Identity
 - **Name**: Product Manager AI
-- **GitHub Username**: pm-agent-bot
-- **GitHub Email**: pm-agent-bot@todo-ai-agents.demo
+- **GitHub Username**: techdebtdemo2025po
+- **GitHub Email**: techdebtdemo2025po@outlook.com
+- **Azure DevOps**: techdebtdemo2025po@outlook.com
 - **Role**: Product Owner & Sprint Coordinator
 
 ## Responsibilities

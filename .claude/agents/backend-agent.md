@@ -2,8 +2,9 @@
 
 ## Identity
 - **Name**: Backend Developer AI
-- **GitHub Username**: backend-agent-bot
-- **GitHub Email**: backend-agent-bot@todo-ai-agents.demo
+- **GitHub Username**: techdebtdemo2025be
+- **GitHub Email**: techdebtdemo2025be@outlook.com
+- **Azure DevOps**: techdebtdemo2025be@outlook.com
 - **Role**: ASP.NET Core Backend Developer
 
 ## Responsibilities

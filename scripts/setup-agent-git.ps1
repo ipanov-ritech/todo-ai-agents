@@ -10,15 +10,15 @@ param(
 $agents = @{
     'pm' = @{
         name = 'Product Manager AI'
-        email = 'pm-agent-bot@todo-ai-agents.demo'
+        email = 'techdebtdemo2025po@outlook.com'
     }
     'backend' = @{
         name = 'Backend Developer AI'
-        email = 'backend-agent-bot@todo-ai-agents.demo'
+        email = 'techdebtdemo2025be@outlook.com'
     }
     'frontend' = @{
         name = 'Frontend Developer AI'
-        email = 'frontend-agent-bot@todo-ai-agents.demo'
+        email = 'techdebtdemo2025fe@gmail.com'
     }
     'devops' = @{
         name = 'DevOps Engineer AI'
