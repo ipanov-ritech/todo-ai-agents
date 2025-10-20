@@ -2,7 +2,8 @@
 
 **Last Updated**: 2025-10-21
 **Current Branch**: `feature/add-priority-backend`
-**Status**: ✅ Agent Infrastructure Complete - Ready for Development
+**Repository**: https://github.com/ipanov-ritech/todo-ai-agents
+**Status**: ✅ Migrated to Work GitHub - Ready for TechDebtGPT Integration
 
 ## 🎯 Project Goal
 
