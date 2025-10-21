@@ -1,0 +1,10 @@
+{
+    "folders": [
+        {
+            "path": ".."
+        },
+        {
+            "path": "../../techdebt-agent-health-mvp"
+        }
+    ]
+}

@@ -7,7 +7,15 @@
       "WebFetch(domain:www.techdebtgpt.com)",
       "Bash(tree .claude/ -L 2)",
       "Bash(git log --all --grep=\"techdebt\" -i --oneline)",
-      "Bash(git add .claude/ scripts/)"
+      "Bash(git add .claude/ scripts/)",
+      "Read(//c/Users/USER/Documents/Cline/MCP/azuredevops-mcp/**)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(cat:*)",
+      "Bash(pwsh:*)",
+      "Bash(npm install:*)",
+      "Bash(test:*)"
     ],
     "deny": [],
     "ask": []
