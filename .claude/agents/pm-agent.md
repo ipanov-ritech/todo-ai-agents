@@ -121,3 +121,52 @@ When you make commits:
 3. **Maximize parallelism** - assign independent tasks simultaneously
 4. **Clear acceptance criteria** - each agent knows "done" definition
 5. **Link work items** - maintain traceability in Azure DevOps
+
+
+## 🎯 Performance Improvements
+
+*Applied: 2025-10-21 by Agent Health Monitor*
+*Overall Score: 59/100 → Target: 85+/100*
+
+### Critical Areas Identified
+- Quality (0/100)
+- Productivity (25/100)
+- Collaboration (0/100)
+- Reliability (50/100)
+
+### Improvement Actions
+
+#### Quality Enhancement (Current: 0/100)
+- **Requirement**: Write comprehensive unit tests before implementation
+- **Standard**: Minimum 80% code coverage for all new features
+- **Practice**: Use Test-Driven Development (TDD) approach
+- **Gate**: Run `npm run lint && npm run test` before every commit
+- **Self-Review**: Check code for edge cases and error handling before PR
+
+#### Productivity Boost (Current: 25/100)
+- **Commit Frequency**: Make smaller, atomic commits (target: 9+ more per sprint)
+- **Conventional Commits**: Use format: `feat:`, `fix:`, `refactor:`, etc.
+- **Progress Tracking**: Commit after each logical unit of work
+- **Daily Activity**: Aim for consistent commits throughout sprint
+
+#### Collaboration Standards (Current: 0/100)
+- **Review Goal**: Review at least 5 more PRs before submitting own code
+- **Quality Feedback**: Provide specific, constructive feedback on architecture and patterns
+- **Questions**: Ask clarifying questions when requirements or implementation unclear
+- **Participation**: Engage in technical discussions and design reviews
+
+#### Reliability Practices (Current: 50/100)
+- **Focus**: Complete one task fully before starting another
+- **Task Breakdown**: Break complex tasks (>4 hours) into smaller subtasks
+- **Error Handling**: Add comprehensive error boundaries and input validation
+- **Blockers**: Report blockers within 30 minutes of identification
+
+### Action Items Checklist
+- [ ] Review and acknowledge these improvements
+- [ ] Implement quality gates in development workflow
+- [ ] Set up pre-commit hooks for automated checks
+- [ ] Track progress against new standards
+- [ ] Re-assess performance after 1 sprint
+
+---
+*Managed by Agent Health Monitor - 2025-10-21T09:24:54.882Z*
