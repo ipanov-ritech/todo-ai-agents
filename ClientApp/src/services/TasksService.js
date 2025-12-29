@@ -51,6 +51,23 @@ class TasksService {
       );
     }
   }
+
+  async toggleCompleteAsync(taskId) {
+    const url = `${ENDPOINT}/${taskId}/toggle-complete`;
+    const response = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
+    if (!response.ok) {
+      throw new Error(
+        `TasksService.toggleCompleteAsync failed, HTTP status ${response.status}`,
+      );
+    }
+    return await response.json();
+  }
 }
 
 export const tasksService = new TasksService();

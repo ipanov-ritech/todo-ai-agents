@@ -45,6 +45,7 @@ class TaskListRaw extends Component {
         <table id="tasks" className="table table-hover table-striped">
           <thead>
             <tr>
+              <th>Done</th>
               <th>ID</th>
               <th>Description</th>
               <th>#</th>

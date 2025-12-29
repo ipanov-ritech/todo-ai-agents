@@ -65,4 +65,17 @@ public class TasksController : ControllerBase
         }
         return result;
     }
+
+    [HttpPut("{id}/toggle-complete")]
+    [ProducesResponseType(typeof(TodoTask), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiErrorResult), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<TodoTask>> ToggleComplete(int id)
+    {
+        var task = await _todoTasksService.ToggleCompleteAsync(id);
+        if (task == null)
+        {
+            return NotFound(new ApiErrorResult(StatusCodes.Status404NotFound, "Not found", $"Entity {id} not found"));
+        }
+        return task;
+    }
 }

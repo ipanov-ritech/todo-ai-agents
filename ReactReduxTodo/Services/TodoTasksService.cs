@@ -40,7 +40,20 @@ public class TodoTasksService
         var rowsDeleted = await _applicationDbContext.TodoTasks
             .Where(t => t.Id == id)
             .ExecuteDeleteAsync();
-        
+
         return rowsDeleted > 0;
+    }
+
+    public async Task<TodoTask?> ToggleCompleteAsync(int id)
+    {
+        var task = await _applicationDbContext.TodoTasks.FindAsync(id);
+        if (task == null)
+        {
+            return null;
+        }
+
+        task.IsCompleted = !task.IsCompleted;
+        await _applicationDbContext.SaveChangesAsync();
+        return task;
     }
 }
