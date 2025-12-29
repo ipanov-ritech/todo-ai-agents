@@ -61,6 +61,26 @@ export const reducer = (srcState, action) => {
         refreshInProgress: false,
         error: action.error.message,
       };
+    // TOGGLE COMPLETE
+    case actionTypes.TOGGLE_COMPLETE_STARTED:
+      return { ...state, refreshInProgress: true, error: null };
+    case actionTypes.TOGGLE_COMPLETE_SUCCESS:
+      return {
+        ...state,
+        refreshInProgress: false,
+        error: null,
+        tasks: state.tasks.map((item) =>
+          item.id === action.task.id
+            ? { ...item, isCompleted: action.task.isCompleted }
+            : item
+        ),
+      };
+    case actionTypes.TOGGLE_COMPLETE_FAILURE:
+      return {
+        ...state,
+        refreshInProgress: false,
+        error: action.error.message,
+      };
     default:
       return state;
   }

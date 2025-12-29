@@ -51,14 +51,31 @@ function* watchDeleteTask() {
   yield takeEvery(types.DELETE_TASK, deleteTaskAsync);
 }
 
+function* toggleCompleteAsync(action) {
+  const { taskId } = action;
+  yield put(actions.toggleCompleteStarted(taskId));
+  try {
+    const task = yield call(tasksService.toggleCompleteAsync, taskId);
+    yield put(actions.toggleCompleteSuccess(task));
+  } catch (error) {
+    yield put(actions.toggleCompleteFailure(error));
+  }
+}
+
+function* watchToggleComplete() {
+  yield takeEvery(types.TOGGLE_COMPLETE, toggleCompleteAsync);
+}
+
 export {
   getTasksAsync,
   addTaskAsync,
   deleteTaskAsync,
+  toggleCompleteAsync,
 };
 
 export const taskListWatcherSagas = [
   watchGetTasks,
   watchAddTask,
   watchDeleteTask,
+  watchToggleComplete,
 ];

@@ -94,3 +94,33 @@ export function deleteTaskFailure(error) {
     error,
   };
 }
+
+// TOGGLE COMPLETE
+
+export function toggleComplete(taskId) {
+  return {
+    type: types.TOGGLE_COMPLETE,
+    taskId,
+  };
+}
+
+export function toggleCompleteStarted(taskId) {
+  return {
+    type: types.TOGGLE_COMPLETE_STARTED,
+    taskId,
+  };
+}
+
+export function toggleCompleteSuccess(task) {
+  return {
+    type: types.TOGGLE_COMPLETE_SUCCESS,
+    task,
+  };
+}
+
+export function toggleCompleteFailure(error) {
+  return {
+    type: types.TOGGLE_COMPLETE_FAILURE,
+    error,
+  };
+}

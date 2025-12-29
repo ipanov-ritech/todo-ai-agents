@@ -1,0 +1,36 @@
+{
+  "ai": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-20250514",
+    "temperature": 0.3,
+    "maxTokens": 4000
+  },
+  "analysis": {
+    "defaultMode": "quick",
+    "autoDetectAgent": true,
+    "agentThreshold": 50000
+  },
+  "git": {
+    "defaultBranch": "main"
+  },
+  "output": {
+    "verbose": true,
+    "showStrategy": true,
+    "showRecommendations": true
+  },
+  "peerReview": {
+    "enabled": true,
+    "provider": "jira",
+    "useMcp": false,
+    "instanceUrl": "https://ipanovritech.atlassian.net",
+    "email": "ipanov.ritech@gmail.com",
+    "apiToken": "ATATT3xFfGF0Tghp5lcaUPXFzkMypyLPrvLlUVN3gsZHX_HMfGgA04tUsITRFxytzRPNIPejRAl0l56awJR1QB5K35cZ7WYuJEtB9mtYbOHL0pE3OPgwrTG4DY9ZMaR8qum5oaI7hJ9-Zdeh7mwbs97si7OsXjHZ9V9IQjeDUJBY2Ns2YcJJWRM=0AB44715",
+    "defaultProject": "TODO",
+    "analyzeAcceptanceCriteria": true,
+    "rateTicketQuality": true,
+    "generateTestSuggestions": true,
+    "checkScopeCreep": true,
+    "includeTicketDetails": true,
+    "verbose": true
+  }
+}
