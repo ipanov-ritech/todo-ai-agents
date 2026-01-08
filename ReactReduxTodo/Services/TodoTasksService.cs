@@ -40,7 +40,19 @@ public class TodoTasksService
         var rowsDeleted = await _applicationDbContext.TodoTasks
             .Where(t => t.Id == id)
             .ExecuteDeleteAsync();
-        
+
         return rowsDeleted > 0;
+    }
+
+    public async Task<TodoTask?> SetDueDateAsync(int id, DateTime? dueDate)
+    {
+        var rowsUpdated = await _applicationDbContext.TodoTasks
+            .Where(t => t.Id == id)
+            .ExecuteUpdateAsync(s => s.SetProperty(t => t.DueDate, dueDate));
+
+        if (rowsUpdated == 0)
+            return null;
+
+        return await GetAsync(id);
     }
 }

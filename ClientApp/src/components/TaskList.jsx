@@ -47,7 +47,8 @@ class TaskListRaw extends Component {
             <tr>
               <th>ID</th>
               <th>Description</th>
-              <th>#</th>
+              <th>Due Date</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>

@@ -51,14 +51,31 @@ function* watchDeleteTask() {
   yield takeEvery(types.DELETE_TASK, deleteTaskAsync);
 }
 
+function* setDueDateAsync(action) {
+  const { taskId, dueDate } = action;
+  yield put(actions.setDueDateStarted(taskId));
+  try {
+    const task = yield call(tasksService.setDueDateAsync, taskId, dueDate);
+    yield put(actions.setDueDateSuccess(task));
+  } catch (error) {
+    yield put(actions.setDueDateFailure(error));
+  }
+}
+
+function* watchSetDueDate() {
+  yield takeEvery(types.SET_DUE_DATE, setDueDateAsync);
+}
+
 export {
   getTasksAsync,
   addTaskAsync,
   deleteTaskAsync,
+  setDueDateAsync,
 };
 
 export const taskListWatcherSagas = [
   watchGetTasks,
   watchAddTask,
   watchDeleteTask,
+  watchSetDueDate,
 ];

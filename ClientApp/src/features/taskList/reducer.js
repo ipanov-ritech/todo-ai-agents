@@ -61,6 +61,24 @@ export const reducer = (srcState, action) => {
         refreshInProgress: false,
         error: action.error.message,
       };
+    // SET DUE DATE
+    case actionTypes.SET_DUE_DATE_STARTED:
+      return { ...state, refreshInProgress: true, error: null };
+    case actionTypes.SET_DUE_DATE_SUCCESS:
+      return {
+        ...state,
+        refreshInProgress: false,
+        error: null,
+        tasks: state.tasks.map((item) =>
+          item.id === action.task.id ? { ...item, dueDate: action.task.dueDate } : item
+        ),
+      };
+    case actionTypes.SET_DUE_DATE_FAILURE:
+      return {
+        ...state,
+        refreshInProgress: false,
+        error: action.error.message,
+      };
     default:
       return state;
   }
