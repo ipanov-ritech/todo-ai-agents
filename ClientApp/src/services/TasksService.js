@@ -51,6 +51,24 @@ class TasksService {
       );
     }
   }
+
+  async setDueDateAsync(taskId, dueDate) {
+    const url = `${ENDPOINT}/${taskId}/duedate`;
+    const response = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ dueDate }),
+    });
+    if (!response.ok) {
+      throw new Error(
+        `TasksService.setDueDateAsync failed, HTTP status ${response.status}`,
+      );
+    }
+    return await response.json();
+  }
 }
 
 export const tasksService = new TasksService();

@@ -94,3 +94,34 @@ export function deleteTaskFailure(error) {
     error,
   };
 }
+
+// SET DUE DATE
+
+export function setDueDate(taskId, dueDate) {
+  return {
+    type: types.SET_DUE_DATE,
+    taskId,
+    dueDate,
+  };
+}
+
+export function setDueDateStarted(taskId) {
+  return {
+    type: types.SET_DUE_DATE_STARTED,
+    taskId,
+  };
+}
+
+export function setDueDateSuccess(task) {
+  return {
+    type: types.SET_DUE_DATE_SUCCESS,
+    task,
+  };
+}
+
+export function setDueDateFailure(error) {
+  return {
+    type: types.SET_DUE_DATE_FAILURE,
+    error,
+  };
+}

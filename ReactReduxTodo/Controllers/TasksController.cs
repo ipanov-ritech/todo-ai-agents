@@ -65,4 +65,19 @@ public class TasksController : ControllerBase
         }
         return result;
     }
+
+    [HttpPut("{id}/duedate")]
+    [ProducesResponseType(typeof(TodoTask), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiErrorResult), StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<TodoTask>> SetDueDate(int id, [FromBody] SetDueDateRequest request)
+    {
+        var task = await _todoTasksService.SetDueDateAsync(id, request.DueDate);
+        if (task == null)
+        {
+            return NotFound(new ApiErrorResult(StatusCodes.Status404NotFound, "Not found", $"Entity {id} not found"));
+        }
+        return task;
+    }
 }
+
+public record SetDueDateRequest(DateTime? DueDate);

@@ -14,3 +14,8 @@ export const DELETE_TASK = 'taskList.DELETE_TASK';
 export const DELETE_TASK_STARTED = 'taskList.DELETE_TASK_STARTED';
 export const DELETE_TASK_SUCCESS = 'taskList.DELETE_TASK_SUCCESS';
 export const DELETE_TASK_FAILURE = 'taskList.DELETE_TASK_FAILURE';
+
+export const SET_DUE_DATE = 'taskList.SET_DUE_DATE';
+export const SET_DUE_DATE_STARTED = 'taskList.SET_DUE_DATE_STARTED';
+export const SET_DUE_DATE_SUCCESS = 'taskList.SET_DUE_DATE_SUCCESS';
+export const SET_DUE_DATE_FAILURE = 'taskList.SET_DUE_DATE_FAILURE';
